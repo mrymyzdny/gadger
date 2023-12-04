@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadger</title>
+    <link rel="icon" href="./images/app-icon.png">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/grid.css">
+    <link rel="stylesheet" href="./styles/app.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav__left-wrapper">
+                    <svg class="nav__logo" width="153" height="38" viewBox="0 0 153 38" fill="none">
+                        <g clip-path="url(#clip0_32_949)">
+                        <path d="M18.4308 37.5811L32.1833 29.6381C32.6612 29.3677 33.0591 28.9755 33.3363 28.5014C33.6136 28.0274 33.7604 27.4884 33.7618 26.9392V11.0569C33.7615 10.5097 33.617 9.97214 33.3431 9.49838C33.0691 9.02461 32.6753 8.6313 32.2012 8.35799L18.4308 0.415069C17.9565 0.142477 17.419 -0.000976562 16.872 -0.000976562C16.3249 -0.000976562 15.7874 0.142477 15.3131 0.415069L1.54634 8.35799C1.07312 8.63203 0.680204 9.0256 0.406934 9.49927C0.133663 9.97294 -0.0103684 10.5101 -0.0107422 11.0569V26.9392C-0.0107301 27.4861 0.133149 28.0234 0.406456 28.4971C0.679762 28.9709 1.07288 29.3644 1.54634 29.6381L15.3024 37.5811C15.7773 37.8574 16.3171 38.003 16.8666 38.003C17.4161 38.003 17.9559 37.8574 18.4308 37.5811ZM18.9212 3.67242V16.5586H25.9478L14.8227 34.3452V21.459H7.79257L18.9212 3.67242Z" fill="#2E68FF"/>
+                        <path d="M14.8227 34.3344V21.4482H7.78899C12.4423 13.9957 18.4845 4.33462 18.9212 3.66168C19.8626 2.20482 21.1155 1.96857 22.6296 2.84197L18.4308 0.415069C17.9565 0.142477 17.419 -0.000976562 16.872 -0.000976562C16.3249 -0.000976562 15.7874 0.142477 15.3131 0.415069L1.54634 8.35798C1.07312 8.63203 0.680204 9.02559 0.406934 9.49926C0.133663 9.97293 -0.0103684 10.5101 -0.0107422 11.0569V26.9392C-0.0107301 27.4861 0.133149 28.0234 0.406456 28.4971C0.679762 28.9708 1.07288 29.3643 1.54634 29.6381L15.3024 37.581C15.7755 37.8551 16.3126 37.9995 16.8594 37.9998C16.8594 37.9998 14.8227 37.2982 14.8227 34.3344Z" fill="#2E68FF"/>
+                        </g>
+                        <path d="M60.1075 15.2344C59.9584 14.7159 59.7489 14.2578 59.479 13.8601C59.2091 13.4553 58.8788 13.1143 58.4882 12.8374C58.1047 12.5533 57.6644 12.3366 57.1672 12.1875C56.6771 12.0384 56.1338 11.9638 55.5372 11.9638C54.4222 11.9638 53.4421 12.2408 52.5969 12.7947C51.7588 13.3487 51.1054 14.1548 50.6367 15.2131C50.1679 16.2642 49.9335 17.5497 49.9335 19.0696C49.9335 20.5895 50.1644 21.8821 50.626 22.9474C51.0876 24.0128 51.7411 24.826 52.5862 25.3871C53.4314 25.9411 54.4293 26.218 55.5798 26.218C56.6239 26.218 57.5152 26.0334 58.2538 25.6641C58.9996 25.2876 59.5678 24.7585 59.9584 24.0767C60.3561 23.3949 60.555 22.5888 60.555 21.6584L61.4925 21.7969H55.8675V18.3239H64.9974V21.0724C64.9974 22.9901 64.5926 24.6378 63.783 26.0156C62.9733 27.3864 61.8582 28.4446 60.4378 29.1903C59.0173 29.929 57.3909 30.2983 55.5585 30.2983C53.5131 30.2983 51.7162 29.8473 50.1679 28.9453C48.6196 28.0362 47.4122 26.7472 46.5457 25.0781C45.6864 23.402 45.2567 21.4134 45.2567 19.1122C45.2567 17.3437 45.5124 15.767 46.0237 14.3821C46.5422 12.9901 47.2666 11.8111 48.197 10.8452C49.1274 9.87926 50.2105 9.14418 51.4463 8.63991C52.6821 8.13565 54.0209 7.88352 55.4626 7.88352C56.6984 7.88352 57.849 8.06463 58.9144 8.42685C59.9797 8.78196 60.9243 9.28622 61.7482 9.93963C62.5791 10.593 63.2574 11.3707 63.783 12.2727C64.3085 13.1676 64.6459 14.1548 64.795 15.2344H60.1075ZM73.0434 30.3089C71.9994 30.3089 71.069 30.1278 70.2522 29.7656C69.4355 29.3963 68.7892 28.853 68.3133 28.1357C67.8446 27.4112 67.6102 26.5092 67.6102 25.4297C67.6102 24.5206 67.7771 23.7571 68.1109 23.1392C68.4447 22.5213 68.8993 22.0241 69.4745 21.6477C70.0498 21.2713 70.7032 20.9872 71.4348 20.7955C72.1734 20.6037 72.9476 20.4688 73.7572 20.3906C74.7089 20.2912 75.476 20.1989 76.0583 20.1136C76.6407 20.0213 77.0633 19.8864 77.3261 19.7088C77.5889 19.5312 77.7203 19.2685 77.7203 18.9205V18.8565C77.7203 18.1818 77.5072 17.6598 77.0811 17.2905C76.662 16.9212 76.0655 16.7365 75.2913 16.7365C74.4745 16.7365 73.8247 16.9176 73.3417 17.2798C72.8588 17.6349 72.5392 18.0824 72.3829 18.6222L68.1855 18.2812C68.3985 17.2869 68.8176 16.4276 69.4426 15.7031C70.0676 14.9716 70.8737 14.4105 71.8609 14.0199C72.8552 13.6222 74.0058 13.4233 75.3126 13.4233C76.2217 13.4233 77.0917 13.5298 77.9227 13.7429C78.7608 13.956 79.503 14.2862 80.1493 14.7337C80.8027 15.1811 81.3176 15.7564 81.694 16.4595C82.0704 17.1555 82.2586 17.9901 82.2586 18.9631V30H77.9547V27.7308H77.8268C77.564 28.2422 77.2125 28.6932 76.7721 29.0838C76.3318 29.4673 75.8027 29.7692 75.1848 29.9893C74.5669 30.2024 73.8531 30.3089 73.0434 30.3089ZM74.3432 27.1768C75.0108 27.1768 75.6003 27.0455 76.1116 26.7827C76.623 26.5128 77.0243 26.1506 77.3155 25.696C77.6066 25.2415 77.7522 24.7266 77.7522 24.1513V22.4148C77.6102 22.5071 77.4149 22.5923 77.1663 22.6705C76.9248 22.7415 76.6514 22.8089 76.346 22.8729C76.0406 22.9297 75.7352 22.983 75.4298 23.0327C75.1244 23.0753 74.8474 23.1143 74.5988 23.1499C74.0662 23.228 73.601 23.3523 73.2032 23.5227C72.8055 23.6932 72.4966 23.924 72.2764 24.2152C72.0562 24.4993 71.9461 24.8544 71.9461 25.2805C71.9461 25.8984 72.1699 26.3707 72.6173 26.6974C73.0718 27.017 73.6471 27.1768 74.3432 27.1768ZM91.8094 30.2663C90.5665 30.2663 89.4408 29.9467 88.4323 29.3075C87.4309 28.6612 86.6354 27.7131 86.0459 26.4631C85.4635 25.206 85.1723 23.6648 85.1723 21.8395C85.1723 19.9645 85.4742 18.4055 86.0779 17.1626C86.6816 15.9126 87.4841 14.9787 88.4856 14.3608C89.4941 13.7358 90.5985 13.4233 91.7988 13.4233C92.715 13.4233 93.4784 13.5795 94.0892 13.892C94.7071 14.1974 95.2043 14.581 95.5807 15.0426C95.9642 15.4972 96.2554 15.9446 96.4543 16.3849H96.5928V8.18182H101.12V30H96.6461V27.3793H96.4543C96.2412 27.8338 95.9394 28.2848 95.5488 28.7322C95.1652 29.1726 94.6645 29.5384 94.0466 29.8295C93.4358 30.1207 92.6901 30.2663 91.8094 30.2663ZM93.2476 26.6548C93.9792 26.6548 94.5971 26.456 95.1013 26.0582C95.6127 25.6534 96.0033 25.0888 96.2732 24.3643C96.5502 23.6399 96.6887 22.7912 96.6887 21.8182C96.6887 20.8452 96.5537 20 96.2838 19.2827C96.014 18.5653 95.6233 18.0114 95.112 17.6207C94.6006 17.2301 93.9792 17.0348 93.2476 17.0348C92.5019 17.0348 91.8733 17.2372 91.362 17.642C90.8506 18.0469 90.4635 18.608 90.2008 19.3253C89.938 20.0426 89.8066 20.8736 89.8066 21.8182C89.8066 22.7699 89.938 23.6115 90.2008 24.343C90.4706 25.0675 90.8577 25.6357 91.362 26.0476C91.8733 26.4524 92.5019 26.6548 93.2476 26.6548ZM112.224 36.4773C110.754 36.4773 109.493 36.2749 108.442 35.87C107.398 35.4723 106.567 34.929 105.949 34.2401C105.331 33.5511 104.93 32.777 104.745 31.9176L108.943 31.353C109.071 31.6797 109.273 31.9851 109.55 32.2692C109.827 32.5533 110.193 32.7805 110.647 32.951C111.109 33.1286 111.67 33.2173 112.331 33.2173C113.318 33.2173 114.131 32.9759 114.77 32.4929C115.416 32.017 115.74 31.218 115.74 30.0959V27.1023H115.548C115.349 27.5568 115.051 27.9865 114.653 28.3913C114.255 28.7962 113.744 29.1264 113.119 29.3821C112.494 29.6378 111.748 29.7656 110.882 29.7656C109.653 29.7656 108.534 29.4815 107.526 28.9134C106.524 28.3381 105.725 27.4609 105.129 26.282C104.539 25.0959 104.245 23.5973 104.245 21.7862C104.245 19.9325 104.546 18.3842 105.15 17.1413C105.754 15.8984 106.556 14.968 107.558 14.3501C108.566 13.7322 109.671 13.4233 110.871 13.4233C111.787 13.4233 112.554 13.5795 113.172 13.892C113.79 14.1974 114.287 14.581 114.664 15.0426C115.047 15.4972 115.342 15.9446 115.548 16.3849H115.718V13.6364H120.225V30.1598C120.225 31.5518 119.884 32.7166 119.202 33.6541C118.52 34.5916 117.576 35.2947 116.368 35.7635C115.168 36.2393 113.787 36.4773 112.224 36.4773ZM112.32 26.3565C113.051 26.3565 113.669 26.1754 114.174 25.8132C114.685 25.4439 115.076 24.9183 115.345 24.2365C115.622 23.5476 115.761 22.7237 115.761 21.7649C115.761 20.8061 115.626 19.9751 115.356 19.272C115.086 18.5618 114.696 18.0114 114.184 17.6207C113.673 17.2301 113.051 17.0348 112.32 17.0348C111.574 17.0348 110.946 17.2372 110.434 17.642C109.923 18.0398 109.536 18.5937 109.273 19.304C109.01 20.0142 108.879 20.8345 108.879 21.7649C108.879 22.7095 109.01 23.5263 109.273 24.2152C109.543 24.897 109.93 25.4261 110.434 25.8026C110.946 26.1719 111.574 26.3565 112.32 26.3565ZM131.294 30.3196C129.61 30.3196 128.162 29.9787 126.947 29.2969C125.74 28.608 124.809 27.6349 124.156 26.3778C123.502 25.1136 123.176 23.6186 123.176 21.8928C123.176 20.2095 123.502 18.7322 124.156 17.4609C124.809 16.1896 125.729 15.1989 126.915 14.4886C128.108 13.7784 129.507 13.4233 131.113 13.4233C132.192 13.4233 133.197 13.5973 134.127 13.9453C135.065 14.2862 135.882 14.8011 136.578 15.4901C137.281 16.179 137.828 17.0455 138.218 18.0895C138.609 19.1264 138.804 20.3409 138.804 21.733V22.9794H124.987V20.1669H134.532C134.532 19.5135 134.39 18.9347 134.106 18.4304C133.822 17.9261 133.428 17.532 132.924 17.2479C132.426 16.9567 131.848 16.8111 131.187 16.8111C130.498 16.8111 129.887 16.9709 129.355 17.2905C128.829 17.603 128.417 18.0256 128.119 18.5582C127.821 19.0838 127.668 19.6697 127.661 20.3161V22.9901C127.661 23.7997 127.81 24.4993 128.108 25.0888C128.414 25.6783 128.843 26.1328 129.397 26.4524C129.951 26.772 130.608 26.9318 131.368 26.9318C131.872 26.9318 132.334 26.8608 132.753 26.7188C133.172 26.5767 133.531 26.3636 133.829 26.0795C134.127 25.7955 134.355 25.4474 134.511 25.0355L138.708 25.3125C138.495 26.321 138.059 27.2017 137.398 27.9545C136.745 28.7003 135.899 29.2827 134.863 29.7017C133.833 30.1136 132.643 30.3196 131.294 30.3196ZM141.766 30V13.6364H146.166V16.4915H146.336C146.635 15.4759 147.135 14.7088 147.838 14.1903C148.541 13.6648 149.351 13.402 150.267 13.402C150.495 13.402 150.74 13.4162 151.002 13.4446C151.265 13.473 151.496 13.5121 151.695 13.5618V17.5888C151.482 17.5249 151.187 17.468 150.811 17.4183C150.434 17.3686 150.09 17.3438 149.777 17.3438C149.11 17.3438 148.513 17.4893 147.988 17.7805C147.469 18.0646 147.057 18.4624 146.752 18.9737C146.453 19.4851 146.304 20.0746 146.304 20.7422V30H141.766Z" fill="black" fill-opacity="0.9"/>
+                        <defs>
+                        <clipPath id="clip0_32_949">
+                        <rect width="33.744" height="38" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="nav__search-box">
+                    <input type="text" class="search-box__input" placeholder="Search here...">
+                        <svg class="search-box-icon" viewBox="0 0 101 101" id="search"><path d="M63.3 59.9c3.8-4.6 6.2-10.5 6.2-17 0-14.6-11.9-26.5-26.5-26.5S16.5 28.3 16.5 42.9 28.4 69.4 43 69.4c6.4 0 12.4-2.3 17-6.2l20.6 20.6c.5.5 1.1.7 1.7.7.6 0 1.2-.2 1.7-.7.9-.9.9-2.5 0-3.4L63.3 59.9zm-20.4 4.7c-12 0-21.7-9.7-21.7-21.7s9.7-21.7 21.7-21.7 21.7 9.7 21.7 21.7-9.7 21.7-21.7 21.7z"></path></svg>
+                    </div>
+                </div>
+                <div class="nav__rigth-wrapper">
+                    <ul class="nav-menu">
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link nav-menu__link--active">Home</a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Shop</a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Pages</a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="#" class="nav-menu__link">Blog</a>
+                        </li>
+                    </ul>
+                    <div class="nav__cart-icon">
+                        <svg viewBox="0 0 24 24" id="shopping-bag"><path d="M19,7H16V6A4,4,0,0,0,8,6V7H5A1,1,0,0,0,4,8V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V8A1,1,0,0,0,19,7ZM10,6a2,2,0,0,1,4,0V7H10Zm8,13a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V9H8v1a1,1,0,0,0,2,0V9h4v1a1,1,0,0,0,2,0V9h2Z"></path></svg>   
+                    </div>
+                    <div class="nav-btn">
+                        <span class="nav-btn__line"></span>
+                    </div>
+                </div>
+            </nav>
+            <div class="header-baner">
+                <div class="header-content">
+                    <h1 class="header-content__title">The ultimate <span>smart watch</span> destination</h1>
+                    <p class="header-content__caption">Satisfied conveying a dependent contented he gentleman agreeable do be. Warrant private blushes removed an in equally totally if. Delivered dejection necessary objection do prevailed.</p>
+                    <div class="header-content__link-wrapper">
+                        <a href="#" class="btn header-content__link">Purchase</a>
+                        <span class="header-content__span">$599.00 USD</span>
+                    </div>
+                </div>
+                <img src="./images/apple-watch.png" alt="header baner" class="header-baner__img">
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="product-benners">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <div class="product-wrapper-1">
+                            <div class="product-content">
+                                <p class="product-content__name">SPEAKER</p>
+                                <h2 class="product-content__caption">High Bluetooth Voice Wireless Speakers</h2>
+                                <p class="product-content__off">30% Off</p>
+                                <a href="#" class="btn product-content__link--blue">Shop Now</a>
+                            </div>
+                                <img src="./images/speaker.png" alt="Product Image" class="product-cover__img">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="product-wrapper-2">
+                                <div>
+                                    <p class="product-content__name">SPEED CHARGER</p>
+                                    <h2 class="product-content__caption">Fast Charging Adapter</h2>
+                                    <a href="#" class="product-content__link">Shop Now</a>
+                                </div>
+                                
+                                <div class="product-cover">
+                                    <img src="./images/charger.png" alt="Product Image" class="product-cover__charger">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <div class="product-wrapper-2">
+                                <div>
+                                    <p class="product-content__name">EARBUDS</p>
+                                    <h2 class="product-content__caption">High Latency 40ms Gaming Buds</h2>
+                                    <a href="#" class="product-content__link">Shop Now</a>
+                                </div>
+                                
+                                <div class="product-cover">
+                                    <img src="./images/earbuds.png" alt="Product Image" class="product-cover__earbund">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                        <div class="product-wrapper-1 product-wrapper--blue">
+                            <div class="product-content">
+                                <p class="product-content__name">HEADPHONE</p>
+                                <h2 class="product-content__caption">High Quality Bluetooth Wireless Headphones</h2>
+                                <p class="product-content__off">25% Off</p>
+                                <a href="#" class="btn-transparent product-content__link--transparent">Shop Now</a>
+                            </div>
+                                <img src="./images/headphone.jpeg" alt="Product Image" class="product-cover__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="featured-product">
+            <div class="container">
+                <div class="section-title">Featured Products</div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="featured-product__cover">
+                            <img src="./images/mouse.jpeg" alt="product" class="featured-product__img">
+                        </div>
+                        <h3 class="featured-product__title">Wireless Optical Mouse</h3>
+                        <p class="featured-product__price">$61.00 USD</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="featured-product__cover">
+                            <img src="./images/watch.jpeg" alt="product" class="featured-product__img">
+                        </div>
+                        <h3 class="featured-product__title">Boat Stone Bluetooth Speaker</h3>
+                        <p class="featured-product__price">$64.00 USD</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="featured-product__cover">
+                            <img src="./images/red-speaker.jpeg" alt="product" class="featured-product__img">
+                        </div>
+                        <h3 class="featured-product__title">Portable Bluetooth Speaker</h3>
+                        <p class="featured-product__price">$80.00 USD</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="featured-product__cover">
+                            <img src="./images/wireless-headphone.jpeg" alt="product" class="featured-product__img">
+                        </div>
+                        <h3 class="featured-product__title">Wireless Portable Gaming Headphone</h3>
+                        <p class="featured-product__price">$70.00 USD</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="featured-product__cover">
+                            <img src="./images/blue-speaker.jpeg" alt="product" class="featured-product__img">
+                        </div>
+                        <h3 class="featured-product__title">Mini Electroplating Round Speaker</h3>
+                        <p class="featured-product__price">$69.00 USD</p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="featured-product__cover">
+                            <img src="./images/gard.jpeg" alt="product" class="featured-product__img">
+                        </div>
+                        <h3 class="featured-product__title">APPLE iPhone 14 Pro Max</h3>
+                        <p class="featured-product__price">$30.00 USD</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lastest-product">
+            <div class="container">
+                <div class="section-title">Latest Products</div>
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="lastest-product__cover">
+                            <div class="lastest-product__content">
+                                <span class="lastest-product__span">15% DISCOUNT</span>
+                                <p class="lastest-product__title">iPhone 14 pro max - Pearl White</p>
+                                <p class="lastest-product__caption">Stay ahead of the curve with our comprehensive coverage of mobile technology and its impact on our lives.</p>
+                                <a href="#" class="btn lastest-product__link--transparent">Shop Now</a>
+                            </div>
+                            <img src="./images/iphone14.jpeg" alt="Iphone" class="lastest-product__img--fixed">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="lastest-product__cover lastest-product__cover--revers">
+                            <div class="lastest-product__content">
+                                <p class="lastest-product__title">iPhone 14 Pro Max Cover Pearl White</p>
+                                <p class="lastest-product__caption">Discover the world of smartphones and mobile technology with our expert insights and analysis.</p>
+                                <a href="#" class="lastest-product__link">Shop Now</a>
+                            </div>
+                            <img src="./images/blue-cover.jpeg" alt="Iphone" class="lastest-product__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <div class="section-title">reviews</div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="review">
+                            <div class="review-bio">
+                                <img src="./images/avatar01.jpeg" alt="Avatar" class="review__avatar">
+                                <div class="user_info">
+                                    <div class="review__username">Frances Guerrero</div>
+                                    <div class="review__role">WBS Client</div>
+                                </div>
+                            </div>
+                            <div class="review__text">
+                                Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="review">
+                            <div class="review-bio">
+                                <img src="./images/avatar02.jpeg" alt="Avatar" class="review__avatar">
+                                <div class="review-info">
+                                    <div class="review__username">Judy Nguyen</div>
+                                    <div class="review__role">WBS Client</div>
+                                </div>
+                            </div>
+                            <div class="review__text">
+                                Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properly Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="review">
+                            <div class="review-bio">
+                                <img src="./images/avatar03.jpeg" alt="Avatar" class="review__avatar">
+                                <div class="review-info">
+                                    <div class="review__username">Carolyn Ortiz</div>
+                                    <div class="review__role">WBS Client</div>
+                                </div>
+                            </div>
+                            <div class="review__text">
+                                Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="review">
+                            <div class="review-bio">
+                                <img src="./images/avatar04.jpeg" alt="Avatar" class="review__avatar">
+                                <div class="review-info">
+                                    <div class="review__username">Jacqueline Miller</div>
+                                    <div class="review__role">WBS Client</div>
+                                </div>
+                            </div>
+                            <div class="review__text">
+                                Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properly Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="review">
+                            <div class="review-bio">
+                                <img src="./images/avatar05.jpeg" alt="Avatar" class="review__avatar">
+                                <div class="review-info">
+                                    <div class="review__username">Carolyn Ortiz</div>
+                                    <div class="review__role">WBS Client</div>
+                                </div>
+                            </div>
+                            <div class="review__text">
+                                Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properly Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="review">
+                            <div class="review-bio">
+                                <img src="./images/avatar06.jpeg" alt="Avatar" class="review__avatar">
+                                <div class="review-info">
+                                    <div class="review__username">Joan Wallace</div>
+                                    <div class="review__role">WBS Client</div>
+                                </div>
+                            </div>
+                            <div class="review__text">Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properly.</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="review">
+                            <div class="review-bio">
+                                <img src="./images/avatar07.jpeg" alt="Avatar" class="review__avatar">
+                                <div class="review-info">
+                                    <div class="review__username">Amanda Reed</div>
+                                    <div class="review__role">WBS Client</div>
+                                </div>
+                            </div>
+                            <div class="review__text">
+                                Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properly Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="review">
+                            <div class="review-bio">
+                                <img src="./images/avatar08.jpeg" alt="Avatar" class="review__avatar">
+                                <div class="review-info">
+                                    <div class="review__username">Lori Stevens</div>
+                                    <div class="review__role">WBS Client</div>
+                                </div>
+                            </div>
+                            <div class="review__text">Two before narrow not relied how to except moment myself Dejection mrs led certainly So gate at no only none open betrayed at properol.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-wrapper">
+                    <div class="newsletter__content">
+                        <div class="newsletter__title">Subscribe to our newsletter!</div>
+                        <div class="newsletter__caption">Get the freshest headlines and updates sent uninterrupted to your inbox.</div>
+                        <a href="#" class="btn newsletter__link">Subscribe</a>
+                    </div>
+                    <img src="./images/watch02.png" alt="Newsletter Image" class="newsletter__img">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-left">
+                    <svg class="footer__logo" width="153" height="38" viewBox="0 0 153 38" fill="none">
+                        <g clip-path="url(#clip0_32_949)">
+                        <path d="M18.4308 37.5811L32.1833 29.6381C32.6612 29.3677 33.0591 28.9755 33.3363 28.5014C33.6136 28.0274 33.7604 27.4884 33.7618 26.9392V11.0569C33.7615 10.5097 33.617 9.97214 33.3431 9.49838C33.0691 9.02461 32.6753 8.6313 32.2012 8.35799L18.4308 0.415069C17.9565 0.142477 17.419 -0.000976562 16.872 -0.000976562C16.3249 -0.000976562 15.7874 0.142477 15.3131 0.415069L1.54634 8.35799C1.07312 8.63203 0.680204 9.0256 0.406934 9.49927C0.133663 9.97294 -0.0103684 10.5101 -0.0107422 11.0569V26.9392C-0.0107301 27.4861 0.133149 28.0234 0.406456 28.4971C0.679762 28.9709 1.07288 29.3644 1.54634 29.6381L15.3024 37.5811C15.7773 37.8574 16.3171 38.003 16.8666 38.003C17.4161 38.003 17.9559 37.8574 18.4308 37.5811ZM18.9212 3.67242V16.5586H25.9478L14.8227 34.3452V21.459H7.79257L18.9212 3.67242Z" fill="#2E68FF"/>
+                        <path d="M14.8227 34.3344V21.4482H7.78899C12.4423 13.9957 18.4845 4.33462 18.9212 3.66168C19.8626 2.20482 21.1155 1.96857 22.6296 2.84197L18.4308 0.415069C17.9565 0.142477 17.419 -0.000976562 16.872 -0.000976562C16.3249 -0.000976562 15.7874 0.142477 15.3131 0.415069L1.54634 8.35798C1.07312 8.63203 0.680204 9.02559 0.406934 9.49926C0.133663 9.97293 -0.0103684 10.5101 -0.0107422 11.0569V26.9392C-0.0107301 27.4861 0.133149 28.0234 0.406456 28.4971C0.679762 28.9708 1.07288 29.3643 1.54634 29.6381L15.3024 37.581C15.7755 37.8551 16.3126 37.9995 16.8594 37.9998C16.8594 37.9998 14.8227 37.2982 14.8227 34.3344Z" fill="#2E68FF"/>
+                        </g>
+                        <path d="M60.1075 15.2344C59.9584 14.7159 59.7489 14.2578 59.479 13.8601C59.2091 13.4553 58.8788 13.1143 58.4882 12.8374C58.1047 12.5533 57.6644 12.3366 57.1672 12.1875C56.6771 12.0384 56.1338 11.9638 55.5372 11.9638C54.4222 11.9638 53.4421 12.2408 52.5969 12.7947C51.7588 13.3487 51.1054 14.1548 50.6367 15.2131C50.1679 16.2642 49.9335 17.5497 49.9335 19.0696C49.9335 20.5895 50.1644 21.8821 50.626 22.9474C51.0876 24.0128 51.7411 24.826 52.5862 25.3871C53.4314 25.9411 54.4293 26.218 55.5798 26.218C56.6239 26.218 57.5152 26.0334 58.2538 25.6641C58.9996 25.2876 59.5678 24.7585 59.9584 24.0767C60.3561 23.3949 60.555 22.5888 60.555 21.6584L61.4925 21.7969H55.8675V18.3239H64.9974V21.0724C64.9974 22.9901 64.5926 24.6378 63.783 26.0156C62.9733 27.3864 61.8582 28.4446 60.4378 29.1903C59.0173 29.929 57.3909 30.2983 55.5585 30.2983C53.5131 30.2983 51.7162 29.8473 50.1679 28.9453C48.6196 28.0362 47.4122 26.7472 46.5457 25.0781C45.6864 23.402 45.2567 21.4134 45.2567 19.1122C45.2567 17.3437 45.5124 15.767 46.0237 14.3821C46.5422 12.9901 47.2666 11.8111 48.197 10.8452C49.1274 9.87926 50.2105 9.14418 51.4463 8.63991C52.6821 8.13565 54.0209 7.88352 55.4626 7.88352C56.6984 7.88352 57.849 8.06463 58.9144 8.42685C59.9797 8.78196 60.9243 9.28622 61.7482 9.93963C62.5791 10.593 63.2574 11.3707 63.783 12.2727C64.3085 13.1676 64.6459 14.1548 64.795 15.2344H60.1075ZM73.0434 30.3089C71.9994 30.3089 71.069 30.1278 70.2522 29.7656C69.4355 29.3963 68.7892 28.853 68.3133 28.1357C67.8446 27.4112 67.6102 26.5092 67.6102 25.4297C67.6102 24.5206 67.7771 23.7571 68.1109 23.1392C68.4447 22.5213 68.8993 22.0241 69.4745 21.6477C70.0498 21.2713 70.7032 20.9872 71.4348 20.7955C72.1734 20.6037 72.9476 20.4688 73.7572 20.3906C74.7089 20.2912 75.476 20.1989 76.0583 20.1136C76.6407 20.0213 77.0633 19.8864 77.3261 19.7088C77.5889 19.5312 77.7203 19.2685 77.7203 18.9205V18.8565C77.7203 18.1818 77.5072 17.6598 77.0811 17.2905C76.662 16.9212 76.0655 16.7365 75.2913 16.7365C74.4745 16.7365 73.8247 16.9176 73.3417 17.2798C72.8588 17.6349 72.5392 18.0824 72.3829 18.6222L68.1855 18.2812C68.3985 17.2869 68.8176 16.4276 69.4426 15.7031C70.0676 14.9716 70.8737 14.4105 71.8609 14.0199C72.8552 13.6222 74.0058 13.4233 75.3126 13.4233C76.2217 13.4233 77.0917 13.5298 77.9227 13.7429C78.7608 13.956 79.503 14.2862 80.1493 14.7337C80.8027 15.1811 81.3176 15.7564 81.694 16.4595C82.0704 17.1555 82.2586 17.9901 82.2586 18.9631V30H77.9547V27.7308H77.8268C77.564 28.2422 77.2125 28.6932 76.7721 29.0838C76.3318 29.4673 75.8027 29.7692 75.1848 29.9893C74.5669 30.2024 73.8531 30.3089 73.0434 30.3089ZM74.3432 27.1768C75.0108 27.1768 75.6003 27.0455 76.1116 26.7827C76.623 26.5128 77.0243 26.1506 77.3155 25.696C77.6066 25.2415 77.7522 24.7266 77.7522 24.1513V22.4148C77.6102 22.5071 77.4149 22.5923 77.1663 22.6705C76.9248 22.7415 76.6514 22.8089 76.346 22.8729C76.0406 22.9297 75.7352 22.983 75.4298 23.0327C75.1244 23.0753 74.8474 23.1143 74.5988 23.1499C74.0662 23.228 73.601 23.3523 73.2032 23.5227C72.8055 23.6932 72.4966 23.924 72.2764 24.2152C72.0562 24.4993 71.9461 24.8544 71.9461 25.2805C71.9461 25.8984 72.1699 26.3707 72.6173 26.6974C73.0718 27.017 73.6471 27.1768 74.3432 27.1768ZM91.8094 30.2663C90.5665 30.2663 89.4408 29.9467 88.4323 29.3075C87.4309 28.6612 86.6354 27.7131 86.0459 26.4631C85.4635 25.206 85.1723 23.6648 85.1723 21.8395C85.1723 19.9645 85.4742 18.4055 86.0779 17.1626C86.6816 15.9126 87.4841 14.9787 88.4856 14.3608C89.4941 13.7358 90.5985 13.4233 91.7988 13.4233C92.715 13.4233 93.4784 13.5795 94.0892 13.892C94.7071 14.1974 95.2043 14.581 95.5807 15.0426C95.9642 15.4972 96.2554 15.9446 96.4543 16.3849H96.5928V8.18182H101.12V30H96.6461V27.3793H96.4543C96.2412 27.8338 95.9394 28.2848 95.5488 28.7322C95.1652 29.1726 94.6645 29.5384 94.0466 29.8295C93.4358 30.1207 92.6901 30.2663 91.8094 30.2663ZM93.2476 26.6548C93.9792 26.6548 94.5971 26.456 95.1013 26.0582C95.6127 25.6534 96.0033 25.0888 96.2732 24.3643C96.5502 23.6399 96.6887 22.7912 96.6887 21.8182C96.6887 20.8452 96.5537 20 96.2838 19.2827C96.014 18.5653 95.6233 18.0114 95.112 17.6207C94.6006 17.2301 93.9792 17.0348 93.2476 17.0348C92.5019 17.0348 91.8733 17.2372 91.362 17.642C90.8506 18.0469 90.4635 18.608 90.2008 19.3253C89.938 20.0426 89.8066 20.8736 89.8066 21.8182C89.8066 22.7699 89.938 23.6115 90.2008 24.343C90.4706 25.0675 90.8577 25.6357 91.362 26.0476C91.8733 26.4524 92.5019 26.6548 93.2476 26.6548ZM112.224 36.4773C110.754 36.4773 109.493 36.2749 108.442 35.87C107.398 35.4723 106.567 34.929 105.949 34.2401C105.331 33.5511 104.93 32.777 104.745 31.9176L108.943 31.353C109.071 31.6797 109.273 31.9851 109.55 32.2692C109.827 32.5533 110.193 32.7805 110.647 32.951C111.109 33.1286 111.67 33.2173 112.331 33.2173C113.318 33.2173 114.131 32.9759 114.77 32.4929C115.416 32.017 115.74 31.218 115.74 30.0959V27.1023H115.548C115.349 27.5568 115.051 27.9865 114.653 28.3913C114.255 28.7962 113.744 29.1264 113.119 29.3821C112.494 29.6378 111.748 29.7656 110.882 29.7656C109.653 29.7656 108.534 29.4815 107.526 28.9134C106.524 28.3381 105.725 27.4609 105.129 26.282C104.539 25.0959 104.245 23.5973 104.245 21.7862C104.245 19.9325 104.546 18.3842 105.15 17.1413C105.754 15.8984 106.556 14.968 107.558 14.3501C108.566 13.7322 109.671 13.4233 110.871 13.4233C111.787 13.4233 112.554 13.5795 113.172 13.892C113.79 14.1974 114.287 14.581 114.664 15.0426C115.047 15.4972 115.342 15.9446 115.548 16.3849H115.718V13.6364H120.225V30.1598C120.225 31.5518 119.884 32.7166 119.202 33.6541C118.52 34.5916 117.576 35.2947 116.368 35.7635C115.168 36.2393 113.787 36.4773 112.224 36.4773ZM112.32 26.3565C113.051 26.3565 113.669 26.1754 114.174 25.8132C114.685 25.4439 115.076 24.9183 115.345 24.2365C115.622 23.5476 115.761 22.7237 115.761 21.7649C115.761 20.8061 115.626 19.9751 115.356 19.272C115.086 18.5618 114.696 18.0114 114.184 17.6207C113.673 17.2301 113.051 17.0348 112.32 17.0348C111.574 17.0348 110.946 17.2372 110.434 17.642C109.923 18.0398 109.536 18.5937 109.273 19.304C109.01 20.0142 108.879 20.8345 108.879 21.7649C108.879 22.7095 109.01 23.5263 109.273 24.2152C109.543 24.897 109.93 25.4261 110.434 25.8026C110.946 26.1719 111.574 26.3565 112.32 26.3565ZM131.294 30.3196C129.61 30.3196 128.162 29.9787 126.947 29.2969C125.74 28.608 124.809 27.6349 124.156 26.3778C123.502 25.1136 123.176 23.6186 123.176 21.8928C123.176 20.2095 123.502 18.7322 124.156 17.4609C124.809 16.1896 125.729 15.1989 126.915 14.4886C128.108 13.7784 129.507 13.4233 131.113 13.4233C132.192 13.4233 133.197 13.5973 134.127 13.9453C135.065 14.2862 135.882 14.8011 136.578 15.4901C137.281 16.179 137.828 17.0455 138.218 18.0895C138.609 19.1264 138.804 20.3409 138.804 21.733V22.9794H124.987V20.1669H134.532C134.532 19.5135 134.39 18.9347 134.106 18.4304C133.822 17.9261 133.428 17.532 132.924 17.2479C132.426 16.9567 131.848 16.8111 131.187 16.8111C130.498 16.8111 129.887 16.9709 129.355 17.2905C128.829 17.603 128.417 18.0256 128.119 18.5582C127.821 19.0838 127.668 19.6697 127.661 20.3161V22.9901C127.661 23.7997 127.81 24.4993 128.108 25.0888C128.414 25.6783 128.843 26.1328 129.397 26.4524C129.951 26.772 130.608 26.9318 131.368 26.9318C131.872 26.9318 132.334 26.8608 132.753 26.7188C133.172 26.5767 133.531 26.3636 133.829 26.0795C134.127 25.7955 134.355 25.4474 134.511 25.0355L138.708 25.3125C138.495 26.321 138.059 27.2017 137.398 27.9545C136.745 28.7003 135.899 29.2827 134.863 29.7017C133.833 30.1136 132.643 30.3196 131.294 30.3196ZM141.766 30V13.6364H146.166V16.4915H146.336C146.635 15.4759 147.135 14.7088 147.838 14.1903C148.541 13.6648 149.351 13.402 150.267 13.402C150.495 13.402 150.74 13.4162 151.002 13.4446C151.265 13.473 151.496 13.5121 151.695 13.5618V17.5888C151.482 17.5249 151.187 17.468 150.811 17.4183C150.434 17.3686 150.09 17.3438 149.777 17.3438C149.11 17.3438 148.513 17.4893 147.988 17.7805C147.469 18.0646 147.057 18.4624 146.752 18.9737C146.453 19.4851 146.304 20.0746 146.304 20.7422V30H141.766Z" fill="black" fill-opacity="0.9"/>
+                        <defs>
+                        <clipPath id="clip0_32_949">
+                        <rect width="33.744" height="38" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <p class="footer__text">Airspeed also makes seas may gather sea where fish saying brought fill one creeping replenish whales form that us one deep beginning.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-list">
+                        <p class="footer-list__title">Pages</p>
+                        <ul class="footer__list">
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link footer-list__link--active">Home</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Shop</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">About</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Contact</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Blog</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">FAQs</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-list">
+                        <p class="footer-list__title">Utility</p>
+                        <ul class="footer__list">
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Style Guide</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Instructions</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Licenses</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Changelog</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Error 404</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Password Protected</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Link In Bio</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-list">
+                        <p class="footer-list__title">Contact</p>
+                        <ul class="footer-contact__list">
+                            <li class="footer-contact__item">
+                                <a href="#" class="footer-contact__link">Info@example.com</a>
+                            </li>
+                            <li class="footer-contact__item">
+                                <a href="#" class="footer-contact__link">+79 2589 63598</a>
+                            </li>
+                            <li class="footer-contact__item">
+                                <a href="#" class="footer-contact__link">544 Honey Creek Rd. West Des Moines, IA 50265</a>
+                            </li>
+                            <li class="footer-content__item">
+                                <div class="social">
+                                    <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.10827 20V10.8777H10.169L10.6282 7.32156H7.10827V5.05147C7.10827 4.0222 7.39291 3.32076 8.87056 3.32076L10.7521 3.31999V0.13923C10.4267 0.0969453 9.30978 0 8.00978 0C5.29518 0 3.43672 1.65697 3.43672 4.69927V7.32156H0.366699V10.8777H3.43672V20H7.10827Z" fill="black" fill-opacity="0.5"/>
+                                    </svg>
+                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_19_83)">
+                                        <path d="M12.7561 10C12.7561 10.9708 11.9691 11.7578 10.9983 11.7578C10.0275 11.7578 9.24048 10.9708 9.24048 10C9.24048 9.02924 10.0275 8.24219 10.9983 8.24219C11.9691 8.24219 12.7561 9.02924 12.7561 10Z" fill="black" fill-opacity="0.5"/><path d="M13.967 4.6875H8.02954C6.73712 4.6875 5.68579 5.73883 5.68579 7.03125V12.9688C5.68579 14.2612 6.73712 15.3125 8.02954 15.3125H13.967C15.2595 15.3125 16.3108 14.2612 16.3108 12.9688V7.03125C16.3108 5.73883 15.2595 4.6875 13.967 4.6875ZM10.9983 12.9297C9.38284 12.9297 8.0686 11.6154 8.0686 10C8.0686 8.38455 9.38284 7.07031 10.9983 7.07031C12.6137 7.07031 13.928 8.38455 13.928 10C13.928 11.6154 12.6137 12.9297 10.9983 12.9297ZM14.3577 7.22656C14.034 7.22656 13.7717 6.96426 13.7717 6.64063C13.7717 6.31699 14.034 6.05469 14.3577 6.05469C14.6813 6.05469 14.9436 6.31699 14.9436 6.64063C14.9436 6.96426 14.6813 7.22656 14.3577 7.22656Z" fill="black" fill-opacity="0.5"/><path d="M15.7249 0H6.27173C3.36401 0 0.998291 2.36572 0.998291 5.27344V14.7266C0.998291 17.6343 3.36401 20 6.27173 20H15.7249C18.6326 20 20.9983 17.6343 20.9983 14.7266V5.27344C20.9983 2.36572 18.6326 0 15.7249 0ZM17.4827 12.9688C17.4827 14.9072 15.9055 16.4844 13.967 16.4844H8.02954C6.09106 16.4844 4.51392 14.9072 4.51392 12.9688V7.03125C4.51392 5.09277 6.09106 3.51562 8.02954 3.51562H13.967C15.9055 3.51562 17.4827 5.09277 17.4827 7.03125V12.9688Z" fill="black" fill-opacity="0.5"/></g><defs><clipPath id="clip0_19_83"><rect width="21" height="20" fill="white"/></clipPath></defs>
+                                    </svg>
+                                    <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_19_87)"><path d="M24.8223 2.3656C23.9006 2.76498 22.9482 3.04148 21.9344 3.16437C22.9789 2.54993 23.7777 1.56682 24.1464 0.368665C23.1633 0.952383 22.088 1.35177 20.9513 1.59755C20.0296 0.614441 18.7086 0 17.2646 0C14.4689 0 12.2262 2.27343 12.2262 5.03841C12.2262 5.4378 12.2569 5.80646 12.3491 6.17513C8.17091 5.9908 4.48427 3.96314 1.99579 0.921661C0.213907 4.11675 2.21084 6.75885 3.53189 7.64979C2.73311 7.64979 1.93434 7.40401 1.25846 7.03535C1.25846 9.52383 3.00961 11.5822 5.28304 12.043C4.79149 12.1966 3.6855 12.2888 3.00961 12.1352C3.65477 14.1321 5.52882 15.6068 7.71008 15.6375C5.98965 16.9893 3.47044 18.0646 0.244629 17.7266C2.48734 19.1705 5.12943 20 7.98658 20C17.2646 20 22.303 12.3195 22.303 5.68358C22.303 5.46852 22.303 5.25347 22.2723 5.03841C23.3169 4.27036 24.1771 3.37942 24.8223 2.3656Z" fill="black" fill-opacity="0.5"/></g><defs><clipPath id="clip0_19_87"><rect width="25" height="20" fill="white"/></clipPath></defs>
+                                    </svg>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
